@@ -1,7 +1,4 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
   "inbounds": [
     {
       "listen": "0.0.0.0",
@@ -18,13 +15,17 @@
       },
       "streamSettings": {
         "network": "xhttp",
+        "xhttpSettings": {
+          "mode": "stream-up",
+          "path": "/"
+        },
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "yahoo.com:443",
+          "dest": "google.com:443",
           "xver": 0,
           "serverNames": [
-            "yahoo.com"
+            "google.com"
           ],
           "privateKey": "mBsBAWSdjK53-RhsTeVZxAJ-wjYW4zb87yye0nw05Ec",
           "shortIds": [
@@ -36,12 +37,7 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "block"
+      "protocol": "freedom"
     }
   ]
 }
