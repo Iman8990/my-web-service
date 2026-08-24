@@ -11,13 +11,16 @@
         "clients": [
           {
             "id": "e35ddae5-6a5b-4860-a0b3-3c69431cf776",
-            "flow": "xtls-rprx-vision"
+            "flow": ""
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "grpc"
+        },
         "security": "reality",
         "realitySettings": {
           "show": false,
