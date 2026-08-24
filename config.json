@@ -17,10 +17,7 @@
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "grpc",
-        "grpcSettings": {
-          "serviceName": "grpc"
-        },
+        "network": "xhttp",
         "security": "reality",
         "realitySettings": {
           "show": false,
