@@ -1,4 +1,47 @@
 {
-  "inbounds": [{"port": 8080,"protocol": "vless","settings": {"clients": [{"id": "12345678-1234-1234-1234-1234567890ab","flow": "xtls-rprx-vision"}],"decryption": "none"},"streamSettings": {"network": "tcp","security": "reality","realitySettings": {"show": false,"dest": "dl.google.com:443","xver": 0,"serverNames": ["dl.google.com"],"privateKey": "yA8bC7dE6fG5hI4jK3lL2mN1oP0qR9sT8uV7wX6yZ5c","shortIds": ["12345678"]}}}],
-  "outbounds": [{"protocol": "freedom"}]
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "e35ddae5-6a5b-4860-a0b3-3c69431cf776",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "www.microsoft.com:443",
+          "xver": 0,
+          "serverNames": [
+            "www.microsoft.com"
+          ],
+          "privateKey": "mBsBAWSdjK53-RhsTeVZxAJ-wjYW4zb87yye0nw05Ec",
+          "shortIds": [
+            "1a2b3c4d"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "tag": "block"
+    }
+  ]
 }
